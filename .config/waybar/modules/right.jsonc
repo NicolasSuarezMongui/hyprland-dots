@@ -1,0 +1,18 @@
+{
+  "modules-right": ["network", "pulseaudio"],
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "󰈀  {ifname}",
+    "format-disconnected": "󰖪  Offline",
+    "tooltip-format": "{ipaddr}"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "  Muted",
+    "format-icons": {
+      "headphones": " ",
+      "default": ["", " ", " "]
+    },
+    "scroll-step": 5
+  }
+}

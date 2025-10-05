@@ -1,0 +1,31 @@
+/* Catppuccin Mocha Theme */
+* {
+  font-family: "IosevkaTerm Nerd Font", monospace;
+  font-size: 14px;
+  color: #cdd6f4;
+  background: transparent;
+}
+
+#workspaces button {
+  padding: 0 6px;
+  color: #89b4fa;
+}
+
+#workspaces button.active {
+  background: #313244;
+  border-radius: 6px;
+}
+
+#clock {
+  padding: 0 10px;
+  background: #1e1e2e;
+  border-radius: 8px;
+}
+
+#network,
+#pulseaudio {
+  padding: 0 8px;
+  margin: 0 3px;
+  background: #1e1e2e;
+  border-radius: 6px;
+}
