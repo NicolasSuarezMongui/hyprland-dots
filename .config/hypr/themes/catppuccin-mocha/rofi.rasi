@@ -1,0 +1,10 @@
+* {
+  background: #1e1e2e;
+  foreground: #cdd6f4;
+  border: 0;
+}
+window { transparency: "real"; padding: 16px; }
+listview { spacing: 6px; }
+element { padding: 6px 10px; }
+element selected { background: #313244; }
+
