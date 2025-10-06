@@ -1,0 +1,8 @@
+{
+  "modules-left": ["hyprland/workspaces"],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true
+  }
+}

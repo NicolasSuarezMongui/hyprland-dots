@@ -1,0 +1,10 @@
+{
+  "modules-left": ["custom/menu"],
+
+  "custom/menu": {
+    "format": " ",
+    "tooltip": false,
+    "on-click": "rofi -show drun",
+    "interval": 0
+  }
+}

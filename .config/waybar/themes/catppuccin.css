@@ -7,8 +7,12 @@
 }
 
 #workspaces button {
-  padding: 0 6px;
+  padding: 0;
+  margin: 0 4px;
+  border-radius: 50%;
+  background: #1e1e2e;
   color: #89b4fa;
+  font-size: 12px;
 }
 
 #workspaces button.active {

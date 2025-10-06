@@ -2,6 +2,7 @@
   "layer": "top",
   "position": "top",
   "modules-left": [
+    "custom/menu",
     "hyprland/workspaces"
   ],
   "modules-center": [
@@ -11,6 +12,12 @@
     "network",
     "pulseaudio"
   ],
+  "custom/menu": {
+    "format": " ",
+    "tooltip": false,
+    "on-click": "rofi -show drun",
+    "interval": 0
+  },
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true
