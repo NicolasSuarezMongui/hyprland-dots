@@ -3,7 +3,9 @@
   "position": "top",
   "modules-left": [
     "custom/menu",
-    "hyprland/workspaces"
+    "custom/theme",
+    "hyprland/workspaces",
+    "tray"
   ],
   "modules-center": [
     "clock"
@@ -22,9 +24,23 @@
     "disable-scroll": true,
     "all-outputs": true
   },
+  "custom/theme": {
+    "format": " ",
+    "tooltip": "Cambiar tema",
+    "on-click": "~/.config/waybar/scripts/theme-switch.sh",
+    "interval": 0
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8
+  },
   "clock": {
-    "format": "{:%H:%M  %d/%m/%Y}",
-    "tooltip-format": "{:%A, %d %B %Y}",
+    "format": " {:%H:%M  %d/%m/%Y}",
+    "tooltip-format": "{calendar}",
+    "calendar": {
+      "mode": "year",
+      "on-scroll": 1
+    },
     "interval": 60
   },
   "network": {

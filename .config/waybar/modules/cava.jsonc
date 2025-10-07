@@ -1,0 +1,9 @@
+{
+  "modules-left": ["custom/cava"],
+
+  "custom/cava": {
+    "exec": "~/.config/waybar/scripts/cava.sh",
+    "interval": 0.05,
+    "return-type": "json"
+  }
+}

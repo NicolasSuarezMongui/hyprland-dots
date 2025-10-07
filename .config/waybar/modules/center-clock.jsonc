@@ -1,0 +1,13 @@
+{
+  "modules-center": ["clock"],
+
+  "clock": {
+    "format": " {:%H:%M  %d/%m/%Y}",
+    "tooltip-format": "{calendar}",
+    "calendar": {
+      "mode": "year",
+      "on-scroll": 1
+    },
+    "interval": 60
+  }
+}

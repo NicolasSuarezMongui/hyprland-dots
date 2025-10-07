@@ -1,0 +1,10 @@
+{
+  "modules-left": ["custom/theme"],
+
+  "custom/theme": {
+    "format": " ",
+    "tooltip": "Cambiar tema",
+    "on-click": "~/.config/waybar/scripts/theme-switch.sh",
+    "interval": 0
+  }
+}
