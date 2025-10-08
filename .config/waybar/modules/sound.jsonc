@@ -1,0 +1,12 @@
+{
+  "modules-right": ["pulseaudio"],
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " ",
+    "format-icons": {
+      "headphones": " ",
+      "default": ["", " ", " "]
+    },
+    "scroll-step": 5
+  }
+}

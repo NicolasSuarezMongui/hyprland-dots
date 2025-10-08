@@ -2,11 +2,25 @@
   "modules-center": ["clock"],
 
   "clock": {
-    "format": " {:%H:%M  %d/%m/%Y}",
-    "tooltip-format": "{calendar}",
+    "format": " {:%H:%M  %d %B}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
-      "mode": "year",
-      "on-scroll": 1
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#f5e0dc'><b>{}</b></span>",
+        "days": "<span color='#cdd6f4'>{}</span>",
+        "weeks": "<span color='#89b4fa'>S{}</span>",
+        "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
+        "today": "<span color='#f38ba8'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
     },
     "interval": 60
   }

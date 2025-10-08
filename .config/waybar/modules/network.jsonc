@@ -1,0 +1,10 @@
+{
+  "modules-right": ["custom/network"],
+
+  "custom/network": {
+    "exec": "~/.config/waybar/scripts/network-stats.sh",
+    "interval": 2,
+    "return-type": "json",
+    "tooltip": true
+  }
+}

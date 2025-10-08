@@ -11,7 +11,10 @@
     "clock"
   ],
   "modules-right": [
-    "network",
+    "custom/network",
+    "custom/cpu",
+    "custom/temp",
+    "custom/mem",
     "pulseaudio"
   ],
   "custom/menu": {
@@ -35,25 +38,39 @@
     "spacing": 8
   },
   "clock": {
-    "format": " {:%H:%M  %d/%m/%Y}",
-    "tooltip-format": "{calendar}",
+    "format": " {:%H:%M  %d %B}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
-      "mode": "year",
-      "on-scroll": 1
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#f5e0dc'><b>{}</b></span>",
+        "days": "<span color='#cdd6f4'>{}</span>",
+        "weeks": "<span color='#89b4fa'>S{}</span>",
+        "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
+        "today": "<span color='#f38ba8'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
     },
     "interval": 60
   },
-  "network": {
-    "format-wifi": "  {essid}",
-    "format-ethernet": "󰈀  {ifname}",
-    "format-disconnected": "󰖪  Offline",
-    "tooltip-format": "{ipaddr}"
+  "custom/network": {
+    "exec": "~/.config/waybar/scripts/network-stats.sh",
+    "interval": 2,
+    "return-type": "json",
+    "tooltip": true
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-muted": "  Muted",
+    "format-muted": " ",
     "format-icons": {
-      "headphones": " ",
+      "headphones": " ",
       "default": [
         "",
         " ",
@@ -61,5 +78,25 @@
       ]
     },
     "scroll-step": 5
+  },
+  "custom/cpu": {
+    "exec": "~/.config/waybar/scripts/cpu.sh",
+    "on-click": "~/.config/waybar/scripts/cpu.sh toogle",
+    "interval": 2,
+    "return-type": "json",
+    "tooltip": true
+  },
+  "custom/temp": {
+    "exec": "~/.config/waybar/scripts/temp.sh",
+    "interval": 5,
+    "return-type": "json",
+    "tooltip": true
+  },
+  "custom/mem": {
+    "exec": "~/.config/waybar/scripts/mem.sh",
+    "on-click": "~/.config/waybar/scripts/mem.sh toogle",
+    "interval": 3,
+    "return-type": "json",
+    "tooltip": true
   }
 }

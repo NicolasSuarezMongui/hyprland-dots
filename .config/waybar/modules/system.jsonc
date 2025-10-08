@@ -1,0 +1,26 @@
+{
+  "modules-right": ["custom/cpu", "custom/temp", "custom/mem"],
+
+  "custom/cpu": {
+    "exec": "~/.config/waybar/scripts/cpu.sh",
+    "on-click": "~/.config/waybar/scripts/cpu.sh toogle",
+    "interval": 2,
+    "return-type": "json",
+    "tooltip": true
+  },
+
+  "custom/temp": {
+    "exec": "~/.config/waybar/scripts/temp.sh",
+    "interval": 5,
+    "return-type": "json",
+    "tooltip": true
+  },
+
+  "custom/mem": {
+    "exec": "~/.config/waybar/scripts/mem.sh",
+    "on-click": "~/.config/waybar/scripts/mem.sh toogle",
+    "interval": 3,
+    "return-type": "json",
+    "tooltip": true
+  }
+}

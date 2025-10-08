@@ -41,7 +41,10 @@ MODULE_ORDER_CENTER=(
 )
 
 MODULE_ORDER_RIGHT=(
-  "network"
+  "custom/network"
+  "custom/cpu"
+  "custom/temp"
+  "custom/mem"
   "pulseaudio"
 )
 
@@ -53,7 +56,9 @@ files=(
   "$WAYBAR_DIR/modules/themes.jsonc"
   "$WAYBAR_DIR/modules/tray.jsonc"
   "$WAYBAR_DIR/modules/center-clock.jsonc"
-  "$WAYBAR_DIR/modules/right.jsonc"
+  "$WAYBAR_DIR/modules/network.jsonc"
+  "$WAYBAR_DIR/modules/sound.jsonc"
+  "$WAYBAR_DIR/modules/system.jsonc"
 )
 
 echo -e "${BLUE}🔨 Construyendo configuración de Waybar...${NC}"
